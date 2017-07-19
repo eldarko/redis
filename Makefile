@@ -3,6 +3,9 @@
 default: all
 
 .DEFAULT:
+	$(MAKE) -C deps/lua
+	$(MAKE) -C deps/hiredis
+	$(MAKE) -C deps/linenoise
 	cd src && $(MAKE) $@
 
 install:
